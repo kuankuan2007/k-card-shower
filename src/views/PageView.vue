@@ -32,7 +32,7 @@
               </div>
             </div>
             <div class="card-index" v-if="!page?.hideCurrentCard">
-              第 {{ globalVars.activeCard + 1 }} 页 / 共 {{ globalVars.cardNum }} 页
+              第{{ globalVars.activeCard + 1 }}页/共{{ globalVars.cardNum }}页
             </div>
           </div>
         </div>
@@ -162,6 +162,7 @@ onMounted(() => {
     font-size: 1.5rem;
     font-weight: bold;
     z-index: 5;
+    white-space: nowrap;
   }
 }
 .card-area-item {
