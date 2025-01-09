@@ -7,6 +7,10 @@ import AutoImport from 'unplugin-auto-import/vite';
 import { visualizer } from 'rollup-plugin-visualizer';
 import vitePluginLegacy from '@vitejs/plugin-legacy';
 
+import postcssPresetEnv from 'postcss-preset-env';
+import autoprefixer from 'autoprefixer';
+import cssnano from 'cssnano';
+
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
@@ -59,6 +63,18 @@ export default defineConfig({
   preview: {
     port: 82,
     host: '0.0.0.0',
+  },
+  css: {
+    postcss: {
+      plugins: [
+        postcssPresetEnv(),
+        autoprefixer({
+          overrideBrowserslist: ['Android 4.1', 'iOS 7.1', 'Chrome > 31', 'ff > 31', 'ie >= 8'],
+          grid: true,
+        }),
+        cssnano(),
+      ],
+    },
   },
   build: {
     minify: 'terser',
