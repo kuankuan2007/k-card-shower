@@ -82,7 +82,7 @@ watchEffect(() => {
     cards.value[i] = void 0;
     const target = {} as AllAwaited<Card>;
     util.awaitAll(page.value.cards[i], target).then(() => {
-      cards.value[i] = target;
+      cards.value[i] = shallowReactive(target);
     });
   }
 });

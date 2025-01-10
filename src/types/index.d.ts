@@ -27,8 +27,20 @@ declare global {
   };
   type Card = {
     component: PromiseAble<Component>;
-    size: PromiseAble<CardSizeConfig>;
+    size: PromiseAble<CardSizeConfig> | CardSizeCalcCallable;
   };
+  type CardSizeCalcResult = {
+    width: number;
+    height: number;
+    fontsize?: string;
+  };
+  type CardSizeCalcCallable = (
+    size: {
+      width: number;
+      height: number;
+    },
+    card: AllAwaited<Card>
+  ) => CardSizeCalcResult;
   type Page = {
     cards: PromiseAble<Card[]>;
     background: PromiseAble<PageBackground>;
