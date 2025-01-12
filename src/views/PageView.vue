@@ -33,7 +33,7 @@
               </div>
             </div>
             <div class="card-index" v-if="!page?.hideCurrentCard">
-              第{{ globalVars.activeCard + 1 }}页/共{{ globalVars.cardNum }}页
+              Page {{ globalVars.activeCard + 1 }} / {{ globalVars.cardNum }} in total
             </div>
           </div>
         </div>
