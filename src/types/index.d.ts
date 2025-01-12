@@ -46,6 +46,7 @@ declare global {
     background: PromiseAble<PageBackground>;
     hideCurrentCard?: boolean;
     title?: string;
+    canJumpPage?: boolean;
     padding?: {
       top?: string;
       bottom?: string;

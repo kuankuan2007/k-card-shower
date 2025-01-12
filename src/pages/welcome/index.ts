@@ -50,5 +50,6 @@ const page: Page = {
   ],
   background: '#220022',
   title: 'Welcome!',
+  canJumpPage: false,
 };
 export default page;

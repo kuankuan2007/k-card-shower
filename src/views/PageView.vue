@@ -2,12 +2,13 @@
   <div class="root" ref="root">
     <div
       class="space"
-      :style="
-        util.objectMap(globalVars, (key, value) => ({
+      :style="{
+        ...(util.objectMap(globalVars, (key, value) => ({
           key: util.camelCase2CssVariable(key as string),
           value,
-        })) as any
-      "
+        })) as any),
+        'scroll-snap-stop': page?.canJumpPage ? 'normal' : 'always',
+      }"
     >
       <div class="scroll-space">
         <div class="show-space">
