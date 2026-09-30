@@ -14,10 +14,10 @@ If you manage your node.js version with `nvm`, run the following command:
 nvm use
 ```
 
-### npm
+### pnpm
 
 ```bash
-npm install
+pnpm install
 ```
 
 ### Development & Build
@@ -27,13 +27,13 @@ The project was written in vite
 To start the developer environment, run the following command:
 
 ```bash
-npm run dev
+pnpm run dev
 ```
 
 To build the project, run the following command:
 
 ```bash
-npm run build
+pnpm run build
 ```
 
 ## Open Source
