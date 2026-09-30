@@ -2,10 +2,10 @@
   <div :style="{ background: css }"></div>
 </template>
 <script setup lang="ts">
-import type Color from 'color';
+import type { ColorInstance } from 'color';
 
 const props = defineProps<{
-  background: string | Color;
+  background: string | ColorInstance;
 }>();
 
 const css = computed(() => {

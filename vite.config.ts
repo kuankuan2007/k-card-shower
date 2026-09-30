@@ -92,9 +92,6 @@ export default defineConfig({
     },
     rollupOptions: {
       output: {
-        manualChunks: {
-          vue: ['vue', 'vue-router'],
-        },
         entryFileNames: 'script/[name]-[hash].js',
         chunkFileNames() {
           return 'script/[name]-[hash].js';
